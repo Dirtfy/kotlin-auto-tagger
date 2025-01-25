@@ -20,7 +20,6 @@ publishing {
         create<MavenPublication>("mavenJava") {
             groupId = "com.github.Dirtfy"
             artifactId = "kotlin-auto-tagger"
-            version = "0.0.1"
 
             from(components["java"])
         }
