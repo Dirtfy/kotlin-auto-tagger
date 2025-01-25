@@ -1,8 +1,8 @@
-# ansroid-auto-tagger
+# kotlin-auto-tagger
 This is a 'TAG' interface.
 
 ## how to use
-This is available through   [JitPack](https://jitpack.io/#Dirtfy/ansroid-auto-tagger).
+This is available through   [JitPack](https://www.jitpack.io/#Dirtfy/kotlin-auto-tagger).
 
 ```kotlin
 import com.dirtfy.tagger.Tagger
