@@ -12,6 +12,7 @@ plugins {
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
 
+    // for jitpack
     `maven-publish`
 }
 
@@ -52,7 +53,6 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(8)
     }
-    withJavadocJar()
 }
 
 tasks.named<Test>("test") {
