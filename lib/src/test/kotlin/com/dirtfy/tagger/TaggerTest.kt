@@ -18,7 +18,7 @@ class TaggerTest: Tagger {
         // I'm not sure, but empirically 'getTAG' method doesn't appear.
         // It may have some relation with build configuration related with classpath.
         // Anyway, so I test that it could find 'getTAG' rather target stacktrace.
-        // ?? now getTAG appeard
+        // ?? now getTAG appeared
 
         val (_, secondPart) = TAG.split('.')
 

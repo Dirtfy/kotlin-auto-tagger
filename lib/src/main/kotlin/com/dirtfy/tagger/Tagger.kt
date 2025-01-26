@@ -10,8 +10,6 @@ interface Tagger {
      */
     val TAG: String
         get() {
-            for (st in Thread.currentThread().stackTrace)
-                println(st.methodName)
             return this::class.simpleName + "." +
                     Thread.currentThread().stackTrace[3].methodName
         }
