@@ -1,13 +1,18 @@
 package com.dirtfy.tagger
 
 /**
- * This is an auto tagger interface. It has TAG as property
+ *
+ * This interface gives TAG child.
+ *
+ * NOTICE: The function name in the tag might differ from what you expect because it is derived from the current thread's stack trace.
+ *
+ * Expected StackTrace: getStackTrace <- getTAG(parent) <- getTAG(child) <- (target function)
+ *
+ * @property TAG the tag for log
+ *
  */
 interface Tagger {
 
-    /**
-     * NOTICE: The function name in the tag might differ from what you expect because it is derived from the current thread's stack trace.
-     */
     val TAG: String
         get() {
             return this::class.simpleName + "." +
