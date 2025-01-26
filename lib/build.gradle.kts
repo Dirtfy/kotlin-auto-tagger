@@ -49,16 +49,24 @@ dependencies {
     implementation(libs.guava)
 }
 
-tasks.named<Test>("test") {
-    // Use JUnit Platform for unit tests.
-    useJUnitPlatform()
+tasks {
+    named<Test>("test") {
+        // Use JUnit Platform for unit tests.
+        useJUnitPlatform()
+    }
+
+    register<Jar>("sourcesJar") {
+        archiveClassifier.set("sources")
+        from(sourceSets.main.get().allSource)
+    }
+
+    register<Jar>("javadocJar") {
+        dependsOn(dokkaHtml)
+        from(dokkaHtml.flatMap { it.outputDirectory })
+        archiveClassifier.set("javadoc")
+    }
 }
 
-tasks.register<Jar>("javadocJar") {
-    dependsOn(tasks.dokkaHtml)
-    from(tasks.dokkaHtml.flatMap { it.outputDirectory })
-    archiveClassifier.set("javadoc")
-}
 
 // Apply a specific Java toolchain to ease working on different environments.
 java {
