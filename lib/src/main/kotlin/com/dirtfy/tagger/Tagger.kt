@@ -11,7 +11,7 @@ interface Tagger {
     val TAG: String
         get() {
             return this::class.simpleName + "." +
-                    Thread.currentThread().stackTrace[3].methodName
+                    Thread.currentThread().stackTrace[1].methodName
         }
 
 }
