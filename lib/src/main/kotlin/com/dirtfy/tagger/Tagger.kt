@@ -13,7 +13,7 @@ interface Tagger {
             for (st in Thread.currentThread().stackTrace)
                 println(st.methodName)
             return this::class.simpleName + "." +
-                    Thread.currentThread().stackTrace[2].methodName
+                    Thread.currentThread().stackTrace[3].methodName
         }
 
 }
