@@ -14,7 +14,7 @@ class TaggerTest: Tagger {
     @Test
     fun `second part of TAG is second stacktrace methodName`() {
         // Actually, target stacktrace index is 3 because
-        // getStackTrace -> getTAG -> getTAG -> (target), as I think.
+        // getStackTrace -> getTAG(interface) -> getTAG(class) -> (target), as I think.
         // I'm not sure, but empirically 'getTAG' method doesn't appear.
         // It may have some relation with build configuration related with classpath.
         // Anyway, so I test that it could find 'getTAG' rather target stacktrace.
