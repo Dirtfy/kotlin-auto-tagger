@@ -2,7 +2,7 @@
 This is a 'TAG' interface.
 
 ## how to use
-This is available through   [JitPack](https://www.jitpack.io/#Dirtfy/kotlin-auto-tagger).
+[![Release](https://jitpack.io/v/Dirtfy/kotlin-auto-tagger.svg)](https://www.jitpack.io/#Dirtfy/kotlin-auto-tagger)   
 
 ```kotlin
 import com.dirtfy.tagger.Tagger
